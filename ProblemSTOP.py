@@ -1,5 +1,6 @@
 """Using this File for potential problem solving with The Odin Project"""
 import random
+from random import shuffle, randint
 
 
 Diamonds = ['Ace of Diamonds', 'Two of Diamonds', 'Three of Diamonds', 'Four of Diamonds', 'Five of Diamonds', 'Six of Diamonds', 'Seven of Diamonds', 'Eight of Diamonds', 'Nine of Diamonds', 'Ten of Diamonds' , 'Jack of Diamonds' , 'Queen of Diamonds' , 'King of Diamonds']
@@ -34,9 +35,11 @@ class Deck():
         for EachSuit in ListOCards:
             for Card in EachSuit:
                 if (Card1 == Card):
-                    CardIndex = EachSuit.index(Card)
-                    
-                    print(CardIndex)
+                    Suit = EachSuit
+                    CardIndex = Suit.index(Card) + 1
+
+        
+        
         
 
 class Player:
