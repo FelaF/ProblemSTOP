@@ -21,58 +21,61 @@ OGList = ['Ace of Diamonds', 'Two of Diamonds', 'Three of Diamonds', 'Four of Di
            'Four of Spades', 'Five of Spades', 'Six of Spades', 'Seven of Spades', 'Eight of Spades',
              'Nine of Spades', 'Ten of Spades' , 'Jack of Spades' , 'Queen of Spades' , 'King of Spades']
 
-class Deck():
-    def __init__(self):
-        DeckValue = ListOCards
-    
-    def PassingPreflop(Deck, *Players):
-        for each in ListOCards:
-            random.shuffle(each)
-        random.shuffle(ListOCards)
-        """TEST ON LINE 18 ()"""
-        
-        Card1 = (ListOCards[random.randint(0,3)][random.randint(0,12)])
-        for EachSuit in ListOCards:
-            for Card in EachSuit:
-                if (Card1 == Card):
-                    Suit = EachSuit
-                    CardIndex = Suit.index(Card) + 1
-
-        
-        
-        
 
 class Player:
-    Players = 0
+    Playees = 0
+    hand = []
+
     def __init__(self, name, chips = 0):
         self.name = name
         self.chips = chips
-        self.hand = []
         self.display = ""
 
-
-    
-
+        
 class Game:
     Table_Hand = []
+    Players = 0
 
-    def __init__(self,Pot, *Players):
-        self.pot = Pot
-        self.players = Players
-
+    def __init__(self,pot, Players):
+        self.pot = pot
+        self.Players = Players
+    
 
     @staticmethod
     def Play():
         return
+    
+class Deck():
+    Playees = []
+    def __init__(self, DeckValue = L):
+        self.deckValue = DeckValue
+    
+
+    def GetCards(Deck):
+        return Deck.deckValue()
+
+    def PassingAnything(Deck, *Playee):
+        Playee = []
+        for Player in Playee:
+            Playee += Player
+            continue
+        return Playee
+
+        
+
+
 
     
 
 if __name__ == '__main__':
     AJ = Player("AJ",chips=100)
-    Jeff = Player("Jeff", chips=100)
-    Jim = Player('Jim', chips=20)
-    Christmas = Deck()
-    Christmas.PassingPreflop(AJ,Jim,Jeff)
+    John = Player("John", chips=150)
+    print(AJ.hand)
+    print(AJ.chips)
+    BatmanDeck = Deck()
+    print(BatmanDeck)
+    print(BatmanDeck.GetCards)
+    print(BatmanDeck.PassingAnything(AJ,John))
 
 
 
