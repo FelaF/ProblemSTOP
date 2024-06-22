@@ -80,7 +80,7 @@ class Deck:
     def GetDeckValue(self,value):
         return self.Deck.get(value)
     
-    def GetTwoCardsfromDeck(self, *Players):
+    def GetTwoCardsfromDeck(self):
         CalculationDeck = list(self.Deck.keys())
         Cards = random.sample(CalculationDeck, k=2)
         """There are two deck used here, one for random calculations (list) and another for the working directory"""
@@ -105,10 +105,7 @@ def main():
     Jeff = Player("Jeff", 35, 2000)
     P2 = Player("Jamie", 44, 1500)
     P1 = Player("Charles", 18, 1000)
-    print(Batman.GetTwoCardsfromDeck(Ajani,P2,P1))
-    print(P2.hand)
-    print(P1.hand)
-    print(Ajani.hand)
+    print(Batman.GetTwoCardsfromDeck())
 
 if __name__ == "__main__":
     main()
