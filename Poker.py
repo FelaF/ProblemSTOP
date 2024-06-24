@@ -84,13 +84,13 @@ class Deck:
         CalculationDeck = list(self.Deck.keys())
         Cards = random.sample(CalculationDeck, k=2)
         """There are two deck used here, one for random calculations (list) and another for the working directory"""
-        Card1 = Cards[0]
-        Card2 = Cards[1]
-        self.Deck[Card1] = 0
-        self.Deck[Card2] = 0
-        CalculationDeck.remove(Card1)
-        CalculationDeck.remove(Card2)
-        return (f'{Card1} and {Card2}')
+        for each in Cards:
+            self.Deck[each] = 0
+            CalculationDeck.remove(each)
+        return f"{Cards[0]} and {Cards[1]}"
+
+
+
 
         
         
@@ -105,7 +105,8 @@ def main():
     Jeff = Player("Jeff", 35, 2000)
     P2 = Player("Jamie", 44, 1500)
     P1 = Player("Charles", 18, 1000)
-    print(Batman.GetTwoCardsfromDeck())
+    x = (Batman.GetTwoCardsfromDeck())
+    print(x)
 
 if __name__ == "__main__":
     main()
